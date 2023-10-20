@@ -1,0 +1,18 @@
+.chart-container {
+    display: flex;
+    align-items: flex-start; /* Pour aligner les graphiques en haut de la div */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne si l'espace est insuffisant */
+    margin-right: 50px; /* Espace entre les graphiques */
+  }
+
+
+.bar-chart-container {
+    width: 800px; /* Largeur souhaitée pour le graphique à barres */
+    height: 800px; /* Hauteur souhaitée pour le graphique à barres */
+  } 
+  
+.pie-chart-container {
+    width: 400px; /* Largeur souhaitée pour le graphique en camembert */
+    height: 400px; /* Hauteur souhaitée pour le graphique en camembert */
+  }
+  

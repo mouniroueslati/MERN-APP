@@ -1,0 +1,83 @@
+/* Style du conteneur principal */
+.nouvelle-action-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding-bottom: 100px;
+  }
+  
+  /* Titre */
+  h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #0056b3;
+    background-color: aquamarine;
+  }
+  
+  /* Formulaire */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+  
+  /* Étiquettes des champs */
+  label {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  /* Champs de saisie */
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  
+  /* Bouton Ajouter */
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Bouton Ajouter au survol */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Bouton Ajouter lorsqu'il est désactivé */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Sélecteur de statut */
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style pour les messages d'erreur, si nécessaire */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }

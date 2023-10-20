@@ -15,7 +15,7 @@ const Reporting = () => {
   const handleShowData = () => {
     axios.get(`http://localhost:9090/scorecard/${selectedMonth}`)
       .then((response) => {
-        setTableData(response.data.data); // Mettez à jour avec le nom correct de la propriété de données
+        setTableData(response.data.data);
       })
       .catch((error) => {
         console.error('Erreur lors de la récupération des données :', error);
@@ -23,7 +23,7 @@ const Reporting = () => {
   };
 
   useEffect(() => {
-    // Vous pouvez charger des données initiales ici si nécessaire
+    
   }, []);
 
   return (
@@ -49,7 +49,7 @@ const Reporting = () => {
           <option value="Octobre">Octobre</option>
           <option value="Novembre">Novembre</option>
           <option value="Decembre">Decembre</option>
-          {/* Ajoutez les autres mois ici */}
+          
         </select>
         <button onClick={handleShowData}>Afficher</button>
       </div>

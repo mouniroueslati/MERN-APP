@@ -7,7 +7,6 @@ import '../Styling/ScoreCard.css';
 const ScoreCard = () => {
   const initialData = Array(9).fill().map(() => Array(9).fill(''));
 
-  // Définissez les valeurs fixes pour la première colonne
   const fixedColumnValues = ['Production', 'Vente', 'CA', 'Charges Fixes', 'Charges Variables', 'BFR', 'FR', 'Trésorie', 'R NET'];
 
   fixedColumnValues.forEach((value, index) => {
@@ -15,7 +14,7 @@ const ScoreCard = () => {
   });
 
   const [tableData, setTableData] = useState(initialData);
-  const [selectedMonth, setSelectedMonth] = useState(''); // Initialisez avec un mois par défaut
+  const [selectedMonth, setSelectedMonth] = useState('');
 
   const handleMonthChange = (e) => {
     setSelectedMonth(e.target.value);
@@ -28,7 +27,6 @@ const ScoreCard = () => {
   };
 
   const handleSave = () => {
-    // Reformatez les données dans un tableau plat avant de les envoyer
     const flatData = tableData.map((rowData) => ({
       col1: rowData[0],
       col2: parseFloat(rowData[1]),
@@ -41,13 +39,11 @@ const ScoreCard = () => {
       col9: parseFloat(rowData[8]),
     }));
   
-    // Effectuez une requête POST pour enregistrer les données dans la base de données
     axios.post(`http://localhost:9090/scorecard`, {
       month: selectedMonth,
-      data: flatData, // Utilisez le tableau plat
+      data: flatData, 
     })
       .then((response) => {
-        // Traitez la réponse si nécessaire
         console.log('Données enregistrées avec succès.');
       })
       .catch((error) => {

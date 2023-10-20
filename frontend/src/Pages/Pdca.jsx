@@ -11,13 +11,13 @@ const Pdca = () => {
 
 
   const navigateToNouvelleAction = () => {
-    navigate('/nouvelleaction'); // Rediriger l'utilisateur vers la page NouvelleAction
+    navigate('/nouvelleaction'); 
   };
 
 
 
   useEffect(() => {
-    // Charger les données existantes depuis le backend
+    
     axios.get('http://localhost:9090/pdca')
       .then((response) => {
         setTableData(response.data);
@@ -30,7 +30,7 @@ const Pdca = () => {
  
 
   const deleteRow = (id) => {
-    // Supprimer la ligne du backend
+    
     axios.delete(`http://localhost:9090/pdca/${id}`)
       .then(() => {
         setTableData(tableData.filter((row) => row._id !== id));

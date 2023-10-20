@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #333; /* Couleur de fond du Navbar */
-    color: white; /* Couleur du texte dans le Navbar */
+    background-color: #333; 
+    color: white; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,16 +11,16 @@
   }
   
   .navbar a {
-    text-decoration: none; /* Enlevez les soulignements des liens */
-    color: white; /* Couleur du texte des liens */
-    margin-right: 60px; /* Marge à droite entre les liens */
-    transition: color 0.3s; /* Transition de couleur au survol */
+    text-decoration: none; 
+    color: white; 
+    margin-right: 60px; 
+    transition: color 0.3s; 
     margin-left: 60px;
     
   }
   
   .navbar a:hover {
-    color: #ff9900; /* Couleur du texte des liens au survol */
+    color: #ff9900;
   }
 
  
@@ -32,7 +32,7 @@
   }
   
   .right-links a {
-    margin-left: 10px; /* Ajoutez un espacement entre les liens si nécessaire */
+    margin-left: 10px; 
     color: white;
     text-decoration: none;
   }

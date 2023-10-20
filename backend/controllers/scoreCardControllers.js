@@ -1,6 +1,5 @@
 const ScoreCard = require('../model/scorecard');
 
-// Créez une nouvelle entrée dans le tableau
 module.exports.addscorecard = async (req, res) => {
   const { month, data } = req.body;
 
@@ -16,7 +15,6 @@ module.exports.addscorecard = async (req, res) => {
     });
 };
 
-// Récupérez toutes les entrées du tableau
 module.exports.getAllScoreCard = async (req, res) => {
   ScoreCard.find()
     .then((entries) => {
@@ -27,7 +25,6 @@ module.exports.getAllScoreCard = async (req, res) => {
     });
 };
 
-// Récupérez une entrée spécifique du tableau par mois
 module.exports.getScoreCardEntryByMonth = (req, res) => {
   const { month } = req.params;
 
@@ -43,7 +40,6 @@ module.exports.getScoreCardEntryByMonth = (req, res) => {
     });
 };
 
-// Mettez à jour une entrée du tableau par mois
 exports.updateScoreCardEntry = (req, res) => {
   const { month } = req.params;
   const newData = req.body.data;
@@ -64,7 +60,6 @@ exports.updateScoreCardEntry = (req, res) => {
     });
 };
 
-// Supprimez une entrée du tableau par mois
 exports.deleteScoreCardEntry = (req, res) => {
   const { month } = req.params;
 

@@ -22,14 +22,13 @@ const NouvelleAction = (props) => {
   };
 
   const PlanAction = () => {
-    navigate('/pdca'); // Rediriger l'utilisateur vers la page NouvelleAction
+    navigate('/pdca'); 
   };
 
   const addEntry = () => {
-    // Envoyez la requête POST au serveur pour ajouter la nouvelle entrée
+    
     axios.post('http://localhost:9090/pdca', newEntry)
       .then((response) => {
-        // Redirigez l'utilisateur vers la page principale du tableau PDCA
         props.history.push('/pdca');
       })
       .catch((error) => {

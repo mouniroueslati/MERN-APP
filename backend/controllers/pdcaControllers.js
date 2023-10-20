@@ -1,6 +1,5 @@
 const PDCA = require('../model/pdca');
 
-// Créer une nouvelle entrée PDCA
 module.exports.addpdca = async (req, res) => {
   const { date, probleme, responsable, action, echeance, avancement, statut} = req.body
   const pdcaadd = new PDCA ({
@@ -22,7 +21,6 @@ module.exports.addpdca = async (req, res) => {
   });
 };
 
-// Obtenir toutes les entrées PDCA
 module.exports.getpdca = async (req, res) => {
   const pdcaget= await PDCA.find();
   return(
@@ -30,7 +28,6 @@ module.exports.getpdca = async (req, res) => {
   )
 };
 
-// Mettre à jour une entrée PDCA
 exports.editpdca = async (req, res) => {
     const { date, probleme, responsable, action, echeance, avancement, statut} = req.body
     const {id}=req.params
@@ -39,7 +36,6 @@ exports.editpdca = async (req, res) => {
     .catch((e) => {return res.status(404).json({msg:e.message})})
 };
 
-// Supprimer une entrée PDCA
 exports.deletepdca = async (req, res) => {
     const {id}=req.params
     PDCA.findByIdAndDelete(id)
